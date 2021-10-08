@@ -134,63 +134,63 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-function calculateWinner(squares) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
+// function calculateWinner(squares) {
+//   const lines = [
+//     [0, 1, 2],
+//     [3, 4, 5],
+//     [6, 7, 8],
+//     [0, 3, 6],
+//     [1, 4, 7],
+//     [2, 5, 8],
+//     [0, 4, 8],
+//     [2, 4, 6],
+//   ];
 
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
-  }
-  return null;
-}
+//   for (let i = 0; i < lines.length; i++) {
+//     const [a, b, c] = lines[i];
+//     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+//       return squares[a];
+//     }
+//   }
+//   return null;
+// }
 
-// Main concepts
+// // Main concepts
 
-class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {date: new Date()};
-  }
+// class Clock extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {date: new Date()};
+//   }
 
-  componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
+//   componentDidMount() {
+//     this.timerID = setInterval(() => this.tick(), 1000);
+//   }
 
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
+//   componentWillUnmount() {
+//     clearInterval(this.timerID);
+//   }
 
-  tick() {
-    this.setState({
-      date: new Date()
-    });
-  }
+//   tick() {
+//     this.setState({
+//       date: new Date()
+//     });
+//   }
 
-  render() {
-    return (
-      <div>
-        <h1>Hello, world!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         <h1>Hello, world!</h1>
+//         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+//       </div>
+//     );
+//   }
+// }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('rootb')
-);
+// ReactDOM.render(
+//   <Clock />,
+//   document.getElementById('rootb')
+// );
 
 // When <Clock /> is passed to ReactDOM.render(), React calls the constructor of the Clock component. Since Clock needs to display the current time, it initializes this.state with an object including the current time. We will later update this state.
 // React then calls the Clock component’s render() method. This is how React learns what should be displayed on the screen. React then updates the DOM to match the Clock’s render output.
